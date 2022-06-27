@@ -11,18 +11,20 @@ export default function App() {
   const newUser = async () => {
     const res = await fetch('https://randomuser.me/api/'); //nos devuelve un json con los datos de la API
     const user = await res.json();
+    console.log(user);
 
-    var newArray = user.results.map(function(item){
-      var newParner = {
-        id: item.id.name,
-        name: item.name.first,
-        gender: item.gender,
-      }
-      return newParner;
-    })
+    // var newArray = user.results.map(function(item){
+    //   var newParner = {
+    //     id: item.id.name,
+    //     name: item.name.first,
+    //     gender: item.gender,
+    //   }
+    //   return newParner;
+    // })
     // console.log(newArray)
 
-    setData(prevState =>([...prevState,...newArray]));
+    setData(prevState =>([...prevState,user.results[0]]));
+    console.log
   };
 
   useEffect( ()=> {
@@ -31,11 +33,11 @@ export default function App() {
  
   return (
     <div>
-      <h1>holaa </h1>
+      <h1>Find your partner: </h1>
+      <button onClick={newUser}>Match</button>
       {data.map(item => (
-        <h1 key={item.id.name}>{item.name} </h1>
+        <p key={item.id.name}>{item.name.first}</p>
       ))}
-      <button onClick={newUser}>Random Partner</button>
     </div>
   );
 }
