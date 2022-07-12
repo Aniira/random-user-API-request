@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: aqua;
 }
 
 .App-logo {
@@ -14,7 +15,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,6 +37,54 @@
   }
 }
 
-button {
-  font-size: calc(10px + 2vmin);
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1rem
+}
+
+h1{
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  font-size: calc(8px + 2vmin);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  border: none;
+  margin: 1rem; 
+}
+
+#match {
+  background-color: blue;
+}
+
+#delete {
+  background-color: rgb(171, 171, 171);
+
+}
+
+.partners{
+  background-color: rgb(230, 230, 230);
+  border-radius: 5px;
+  margin: 10px;
+  /* border-bottom: 2px solid black; */
+  display: flex;
+}
+
+.partners p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+  margin-left: 20px;
+  width: 200px;
+}
+
+body{
+  background-color: #f1f1f1;
+  align-items: center;
 }
