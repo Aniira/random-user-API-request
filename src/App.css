@@ -37,6 +37,15 @@
   }
 }
 
+
+/* GENERAL PARAMS */
+body{
+  background-color: #f1f1f1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 #buttons {
   display: flex;
   flex-direction: row;
@@ -51,6 +60,20 @@ h1{
   justify-content: center;
 }
 
+h2{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+p{
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+/* Styles Partners list -----------------------------------------
+
+BUTTONS 
+colocación y personalización */
 button{
   font-size: calc(8px + 2vmin);
   color: white;
@@ -60,31 +83,57 @@ button{
   margin: 1rem; 
 }
 
-#match {
-  background-color: blue;
-}
+#match {background-color: blue;}
+#delete {background-color: rgb(171, 171, 171);}
 
-#delete {
-  background-color: rgb(171, 171, 171);
 
-}
-
+/* LIST ELEMENTS */
 .partners{
+  justify-items: center;
   background-color: rgb(230, 230, 230);
   border-radius: 5px;
   margin: 10px;
-  /* border-bottom: 2px solid black; */
   display: flex;
+  align-items: start;
+  width: 800px;
 }
 
 .partners p{
-  font-family: Arial, Helvetica, sans-serif;
   color: blue;
   margin-left: 20px;
-  width: 200px;
+  width: 100%;
 }
 
-body{
-  background-color: #f1f1f1;
-  align-items: center;
+
+
+/* style for User Card -------------------------------------*/
+
+#user {
+  border-radius: 15px;
+  box-shadow: 5px 5px 15px grey;
+  padding: 3em;
+  width: 35em;
+  margin: 40px;
+}
+
+#user h1 {
+  color: blue;
+  padding: 10px 0 0 0;  
+  margin-bottom: 2px;
+}
+
+#user div{
+  margin-top: 40px;
+  border-bottom: dotted 2px blue;
+  border-top: dotted 2px blue;
+}
+
+#user ul {
+  padding: 3px 0 0 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: blue;
+}
+
+strong{
+  color: black;
 }
